@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-landing-page</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./script/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header id="header">
+            <h1 id="logo">SEDIA<img id="header-img" src="./img/sedia-logo.png" alt="prodotto"></h1>
+        
+        <nav id="nav-bar">
+            <ul class="">
+                <li onclick="location.href='#hero-section'" class="nav-link"><a href="#hero-section">home</a></li>
+                <li onclick="location.href='#le_nostre_sedie'" class="nav-link"><a href="#le_nostre_sedie">le nostre sedie</a></li>
+                <li onclick="location.href='#video_section'" class="nav-link"><a href="#video_section">tutorial</a></li>
+            </ul>
+            <button id="#burger-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        </nav>
+        </header>
+        <div id="hero-section" class="hero-section">
+            <div class="call-to-action">
+                <h2>Stanco di stare in piedi?</h2>
+                <p>Rilassati con <b>SEDIA™</b>!</p>
+                <form id="form">
+                    <input id="email" type="email" placeholder="email" required>
+                    <input id="submit"  type="submit" value="INIZIA ORA">
+                </form>
+              
+            </div>
+            <img id="hero-img" src="./img/hero-sittin-guy.png" alt="">
+        </div>
+    </div>
+    
+    <section id="le_nostre_sedie">
+        <h2 class="section-title">Scegli la SEDIA™ che più ti si addice!</h2>
+        <div class="wrapper">
+            <figure class="card">
+                <img class="card-img" src="./img/sedia-plastica.png">
+                <figcaption> <span class="price">15.50$</span>Sedia "brutta"</figcaption>
+            </figure>  
+            <figure class="card">
+                <img class="card-img" src="./img/sedia-normale.png">
+                <figcaption><span class="price">59.99$</span>Sedia "Normale"</figcaption>
+            </figure>
+            <figure class="card">
+                <img class="card-img" src="./img/sedia-lusso.png">
+                <figcaption><span class="price">8559.99$</span>Sedia di Vittorio Emanuele III</figcaption>
+            </figure>
+        </div>
+        
+    </section>
+
+    <section id="video_section">
+
+            <h2 class="section-title"> Guarda il nostro tutorial su come ci si "siede"!</h2>
+            <iframe id="video" src="https://www.youtube.com/embed/I666ylAQQQc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+    </section>
+    <footer id="footer">
+        <ul>
+            <li>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+
+            </li>
+            <li>
+                <i class="fa fa-telegram" aria-hidden="true"></i>
+            </li>
+            <li>
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </li>
+        </ul>
+        <h3>portfolio project by Fabio Giannasi</h3>
+    </footer>
+    <script>
+        let burgerButton = document.getElementById('#burger-button');
+        let navList = document.querySelector('#nav-bar ul');
+        let listItem = document.querySelectorAll('#nav-bar ul li');
+        burgerButton.addEventListener('click', ()=>{
+            navList.classList.toggle('active');
+
+            listItem.forEach((n) => n.addEventListener('click', () => {
+            navList.classList.remove('active');
+        }));
+        });
+        
+
+    
+    </script>
+    
+</body>
+</html>

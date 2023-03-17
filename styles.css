@@ -1,0 +1,334 @@
+:root{
+    --color1: rgb(227, 239, 158); 
+    --color2: brown;
+    --color3: rgb(217, 28, 28);
+}
+*{
+    outline: 0px solid black;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: var(--color1);
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* HEADER---------------- */
+
+#header-img{
+    width: 3rem;
+    height: 3rem;
+
+}
+#header{
+    color: black;
+    
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color1);
+}
+#logo{
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+
+
+
+/*NAVBAR-----------------------------------------------------------*/
+
+#nav-bar{
+    width: 40%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#nav-bar ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+#nav-bar button{
+    font-size: 2rem;
+    display:none;
+    background-color: var(--color1);
+    height: fit-content;
+    border-radius: 50%;
+    border: none;
+}
+#nav-bar li a{
+   text-decoration: none;
+   color: inherit; 
+}
+
+
+
+/* CONTAINER 100vh--------*/
+
+.container{
+    width: 100vw;
+    height:100vh;
+    max-width: 100%;
+    background-color: rgb(135, 46, 46);
+}
+
+
+
+
+/*HERO SECTION ---------------------------------------------------*/
+
+.hero-section{
+    color: var(--color1);
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+/*call to action -------------*/
+
+.call-to-action{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.call-to-action h2{
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+}
+.call-to-action p{
+    font-size: 1.8rem;
+    text-align: center;
+}
+#form{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+#email{
+    background-color: var(--color1);
+    max-height: 3rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem 0 0 2rem
+}
+#submit{
+    color: var(--color1);
+    font-family: inherit;
+    font-weight: bold;
+    background-color: var(--color3);
+    max-height: 3rem;
+    padding: 1rem;
+    vertical-align: middle;
+    border: none;
+    border-radius: 0 2rem 2rem 0;
+}
+
+/*hero-img--------------*/
+
+#hero-img{
+    height: 90vh;
+    display: block;
+}
+
+
+
+
+/*SEZIONE SEDIE-----------------------------------------------------*/
+
+.section-title{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--color2);
+}
+#le_nostre_sedie{
+    background-color: var(--color1);
+    padding: 3rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+/*CONTENITORE SEDIE----------*/
+
+.wrapper{
+    background-color:rgb(243, 253, 188);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 2rem;
+    border-radius: 3px;
+
+}
+
+/*sedie----------------------*/
+
+
+.card{
+    background-color: rgb(247, 253, 215);
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(163, 44, 0);
+    
+
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: 100ms;
+}
+.card-img{
+    width: 15rem;
+    display: block;
+}
+.card figcaption{
+    text-align: center;
+}
+.price{
+    font-size: 3rem;
+    color: var(--color3);
+    display: block;
+    text-align: center;
+}
+
+
+
+/*VIDEO SECTION-----------------------------------------------------*/
+
+
+#video_section{
+    background-color: var(--color1);
+    
+}
+#video{
+    display: block;
+    margin: 4rem auto 10rem auto;
+}
+iframe{
+    width: 560px;
+    height: 315px;
+}
+
+
+
+
+/*FOOTER------------------------------------------------------------*/
+
+
+#footer{
+    background-color: var(--color2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    
+}
+#footer ul{
+    list-style-type: none ;
+    padding: 0;
+    
+}
+#footer ul li{
+    display: inline-block;
+    margin: 2rem;
+    font-size: 3rem;
+    color: var(--color1)
+}
+#footer h3{
+    
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--color1);
+    margin-right: 2rem;
+}
+
+
+/*QUERIES------------_________---------________-----_______----------*/
+
+
+
+@media screen and (max-width: 880px){
+    #video{
+        width: 100%;
+    }
+    #header{
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 3;
+    }
+    #nav-bar{
+        width: auto;
+    }
+    
+    #nav-bar ul{
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        z-index: 4;
+        top: -100rem;
+        left: 0rem;
+        border: 1px solid black;
+        padding: 0;
+        background-color: var(--color1);
+        opacity: 80%;
+        
+    }
+    #nav-bar li{
+        border-bottom: 2px solid var(--color2);
+        width: 100%;
+        text-align: center;
+        padding: 2rem;
+    }
+    #nav-bar button{
+        display:inline-block;
+        text-align: center;
+        width:fit-content;
+        margin-right: 2rem;
+    }
+    #nav-bar .active{
+        position: absolute;
+      transition: .3s;  
+      top: 5.7rem;  
+    }
+    .call-to-action{
+        margin-top: 35vh;
+        z-index: 1;
+    }
+    #hero-img{
+        opacity: 50%;
+        position: absolute;
+        bottom: 0;
+        z-index: 0;
+        max-width: 100%;
+        height: auto;
+    }
+    #footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    #footer h3{
+        text-align: center;
+        margin: 0 0 2rem 0;
+    }
+    iframe{
+        width: 560px;
+        height: 315px;
+    }
+    
+}
